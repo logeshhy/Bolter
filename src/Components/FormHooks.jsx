@@ -19,7 +19,8 @@ const useStyles = makeStyles({
   },
   media: {
     height: 140,
-    paddingTop: "56.25%"
+    paddingTop: "56.25%",
+    borderRadius: "10px"
   }
 });
 
@@ -45,7 +46,7 @@ export function ImageItemForm({ imgObjForForm, handleSubmit, disableUpdate }) {
       title: title,
       description: description,
       id: imgObjForForm.id
-    })
+    });
     resetTitle();
     resetDescription();
   };
@@ -93,7 +94,12 @@ export function ImageItemForm({ imgObjForForm, handleSubmit, disableUpdate }) {
         />*/}
         <br />
         <br />
-        <Button variant="contained" color="primary" type="submit" disabled={disableUpdate}>
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          disabled={disableUpdate}
+        >
           Submit
         </Button>
       </form>
